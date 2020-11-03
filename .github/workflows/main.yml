@@ -17,9 +17,10 @@ jobs:
     steps:
       - name: Checkout
       - uses: actions/checkout@v2
-
-      - name: Notify
-      - uses: ./
-      - with:
-        message: Mayinbun is a shuffled version of Bunyamin
+      
+      - name: Notifier
+        uses: ./ # Uses an action in the root directory
+        id: notifier
+        with:
+          message: 'Mayinbun is a shuffled version of Bunyamin'
         
