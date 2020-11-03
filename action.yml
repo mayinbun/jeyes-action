@@ -1,0 +1,9 @@
+name: 'Notifier'
+description: 'Notify with a message'
+inputs:
+  message:
+    description: 'Notification message'
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'

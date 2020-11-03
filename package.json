@@ -1,0 +1,23 @@
+{
+  "name": "jeyes-action",
+  "version": "1.0.0",
+  "description": "custom gihub action with js",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayinbun/jeyes-action.git"
+  },
+  "author": "Bunyamin Yildirim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mayinbun/jeyes-action/issues"
+  },
+  "homepage": "https://github.com/mayinbun/jeyes-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0"
+  }
+}
