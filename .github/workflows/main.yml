@@ -5,22 +5,21 @@ on:
   push:
     branches: [ main ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  hello_world_job:
     runs-on: ubuntu-latest
-    name: test notifier
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    name: A job to say hello
     steps:
+      # To use this repository's private action,
+      # you must check out the repository
       - name: Checkout
-      - uses: actions/checkout@v2
-      
-      - name: Notifier
-        uses: ./ # Uses an action in the root directory
+        uses: actions/checkout@v2
+      - name: Notify
+        uses: ./
         id: notifier
         with:
-          message: 'Mayinbun is a shuffled version of Bunyamin'
+          message: 'message to notifier'
+      # Use the output from the `hello` step
+      - name: Get the output time
+        run: echo "The time was"
         
